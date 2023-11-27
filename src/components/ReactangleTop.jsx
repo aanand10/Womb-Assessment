@@ -3,7 +3,7 @@ import React from "react";
 const ReactangleTop = ({ Page }) => {
 	return (
 		<div className='card w-[70dvw] h-[10rem] p-4 m-auto  bg-slate-200 flex bg-[url(./public/images/admin-img.png)] bg-cover '>
-			<div className='bg-gradient-to-r from-white-100'>
+			<div className='card w-[65dvw] h-[10rem] bg-gradient-to-r from-white-500 z-10'>
 				<h2 className=' text-4xl text-[#0A3055] leading-7 font-bold '>
 					{Page}
 				</h2>

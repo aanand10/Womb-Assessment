@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 import Admin from "./Admin";
 import Roles from "./Roles";
 import SearchBox from "./components/SearchBox";
-import ReactangleTop from "./ReactangleTop";
+import ReactangleTop from "./components/ReactangleTop";
 
 const HomePage = () => {
 	return (
@@ -14,9 +14,9 @@ const HomePage = () => {
 			<SearchBox />
 
 			<div className=' flex flex-col w-[80vw] h-full flex-wrap  items-center justify-center  '>
-				<Outlet />
 				<Admin />
 				<Roles />
+				<Outlet />
 			</div>
 		</main>
 	);
