@@ -1,31 +1,22 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./Login";
-
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import HomePage from "./HomePage";
 import Admin from "./Admin";
 import Roles from "./Roles";
 
-const router = createBrowserRouter([
-	{
-		path: "/",
-		element: <HomePage />,
-		children: [
-			{
-				path: "/admin",
-				element: <Admin />,
-			},
-			{
-				path: "/roles",
-				element: <Roles />,
-			},
-		],
-	},
-	{ index: true, path: "/login", element: <Login /> },
-	{ path: "/logout", element: <Login /> },
-]);
 const App = () => {
-	return <RouterProvider router={router} />;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />}>
+          <Route path="admin" element={<Admin />} />
+          <Route path="roles" element={<Roles />} />
+        </Route>
+        <Route path="login" element={<Login />} />
+      </Routes>
+    </Router>
+  );
 };
 
 export default App;

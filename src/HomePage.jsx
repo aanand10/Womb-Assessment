@@ -7,19 +7,19 @@ import SearchBox from "./components/SearchBox";
 import ReactangleTop from "./ReactangleTop";
 
 const HomePage = () => {
-	return (
-		<main className='bg-[#FFF] w-screen  h-screen'>
-			<Sidebar />
-			<ReactangleTop Page='Admin Management' />
-			<SearchBox />
+  return (
+    <main className="bg-[#FFF] w-screen  h-screen ">
+      <Sidebar />
+      <ReactangleTop Page="Admin Management" />
+      <SearchBox />
 
-			<div className=' flex flex-col w-[80vw] h-full flex-wrap  items-center justify-center  '>
-				<Outlet />
-				<Admin />
-				<Roles />
-			</div>
-		</main>
-	);
+      <div className=" flex flex-col w-[80vw] h-full flex-wrap  items-center justify-center  ">
+        <Outlet />
+        <Admin />
+        <Roles />
+      </div>
+    </main>
+  );
 };
 
 export default HomePage;
